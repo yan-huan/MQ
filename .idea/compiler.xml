@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="MQ" />
+        <module name="MQ-producer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="9">
       <module name="MQ" target="1.6" />
+      <module name="MQ-producer" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
