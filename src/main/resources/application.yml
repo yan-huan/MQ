@@ -1,19 +1,56 @@
 
 server:
   port: 8082
+#
+#spring:
+#  application:
+#    name: streamMQ
+#  cloud:
+#    stream:
+#      bindings:
+#        input:
+#          destination: myMQ
+#          group: abd
+#          routingkey: gold#
+#  rabbitmq:
+#    listener:
+#      auto-delete: false
+#    username: guest
+#    password: guest
+#    host: 127.0.0.1
+
+
+
 spring:
   application:
     name: streamMQ
   cloud:
     stream:
       bindings:
+#        input:
+#          destination: foo
+#          binder: rabbit1
         output:
           destination: myMQ
           group: abd
           routingkey: gold#
-  rabbitmq:
-    listener:
-      auto-delete: false
-    username: guest
-    password: guest
-    host: 127.0.0.1
+          binder: rabbit1
+      binders:
+        rabbit1:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: 127.0.0.1
+                username: admin
+                password: 123456
+                virtual-host: /db
+#        rabbit2:
+#          type: rabbit
+#          environment:
+#            spring:
+#              rabbitmq:
+#                host: 127.0.0.1
+#                username: guest
+#                password: guest
+#                virtual-host: /

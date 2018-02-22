@@ -1,5 +1,2 @@
-/Users/yanhuan/Downloads/MQ/src/main/java/com/springboot/platform/Source.java
-/Users/yanhuan/Downloads/MQ/src/main/java/com/springboot/platform/MsgSink.java
-/Users/yanhuan/Downloads/MQ/src/main/java/com/springboot/platform/Application.java
-/Users/yanhuan/Downloads/MQ/src/main/java/com/springboot/platform/Sink.java
-/Users/yanhuan/Downloads/MQ/src/main/java/com/springboot/platform/SendService.java
+/Users/yanhuan/Downloads/MQ-producer/src/main/java/com/springboot/platform/ProductProcessor.java
+/Users/yanhuan/Downloads/MQ-producer/src/main/java/com/springboot/platform/Application.java

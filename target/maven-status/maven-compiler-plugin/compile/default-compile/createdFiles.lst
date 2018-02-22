@@ -1,8 +1,2 @@
-com/springboot/platform/ProductProcessor.class
-com/springboot/platform/Order.class
-com/springboot/platform/Source.class
-com/springboot/platform/Sink.class
-com/springboot/platform/MsgSink.class
-com/springboot/platform/SendService.class
 com/springboot/platform/Application.class
-com/springboot/platform/OrderProcessor.class
+com/springboot/platform/ProductProcessor.class
