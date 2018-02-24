@@ -22,6 +22,7 @@ import org.springframework.messaging.SubscribableChannel;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
@@ -63,8 +64,10 @@ public class Application {
     @RequestMapping("/")
     public String getMessage() {
 
-        System.out.println("字符串信息发送");
-        output.send(MessageBuilder.withPayload("大家好").build());
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String time = dateFormat.format(new Date());
+        System.out.println(time+"字符串信息发送");
+        output.send(MessageBuilder.withPayload(time+"大家好").build());
 
         return "";
     }

@@ -32,9 +32,14 @@ spring:
 #          binder: rabbit1
         output:
           destination: myMQ
-          group: abd
-          routingkey: gold#
+          group: abd  # 拥有 group 默认会持久化队列
           binder: rabbit1
+      rabbit:
+        binder:
+
+        output:
+          producer:
+            bindingRoutingKey: gold.#  # 需要用这个来指定 RoutingKey
       binders:
         rabbit1:
           type: rabbit
@@ -42,15 +47,17 @@ spring:
             spring:
               rabbitmq:
                 host: 127.0.0.1
-                username: admin
-                password: 123456
-                virtual-host: /db
+                port: 5672
+                username: guest
+                password: guest
+                virtual-host: /
 #        rabbit2:
 #          type: rabbit
 #          environment:
 #            spring:
 #              rabbitmq:
 #                host: 127.0.0.1
+#                port: 5676
 #                username: guest
 #                password: guest
 #                virtual-host: /
