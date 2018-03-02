@@ -35,30 +35,10 @@ public class Application {
     @Qualifier("output")
     MessageChannel output;
 
-//    @Autowired
-//    @Qualifier("outputOrder")
-//    MessageChannel outputOrder;
-
-//    @Autowired
-//    ProductProcessor productProcessor;
-
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class);
     }
-
-
-    // 监听 binding 为 Processor.INPUT 的消息
-//    @StreamListener(Processor.OUTPUT)
-//    public void input(Message<String> message) {
-//        System.out.println("接收消息" + message.getPayload());
-//    }
-
-
-//    @StreamListener(Processor.INPUT)
-//    public void input1(Message<String> message) {
-//        System.out.println("接收消息" + message.getPayload());
-//    }
 
 
     @RequestMapping("/")

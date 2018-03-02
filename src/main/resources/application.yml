@@ -1,24 +1,6 @@
 
 server:
   port: 8082
-#
-#spring:
-#  application:
-#    name: streamMQ
-#  cloud:
-#    stream:
-#      bindings:
-#        input:
-#          destination: myMQ
-#          group: abd
-#          routingkey: gold#
-#  rabbitmq:
-#    listener:
-#      auto-delete: false
-#    username: guest
-#    password: guest
-#    host: 127.0.0.1
-
 
 
 spring:
